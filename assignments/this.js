@@ -12,15 +12,41 @@
 // Principle 1
 
 // code example for Window Binding
+function windowBindingThis(string) {
+    console.log(string);
+    console.log(this);
+}
+windowBindingThis("here is the window object!");
 
 // Principle 2
 
 // code example for Implicit Binding
+const Car = {
+    make: 'Nissan',
+    model: 'Altima',
+    year: '2014',
+    start: function() {
+        return `This ${this.make} ${this.model} has started, vroom vroom`;
+    }
+}
+
+console.log(Car.start());
 
 // Principle 3
 
 // code example for New Binding
+function Payment(paymentType, paymentTotal, taxes) {
+    this.paymentType = paymentType;
+    this.paymentTotal = paymentTotal;
+    this.taxes = taxes;
+    this.paid = function() {
+        return `This payment was made with ${this.paymentType} for a total of $${paymentTotal}, with the taxes amount equaling out to ${this.taxes}`;
+    }
+}
 
+const orderId1 = new Payment("Visa", "24.00", "4.00");
+console.log(orderId1.paid());
 // Principle 4
 
 // code example for Explicit Binding
+
