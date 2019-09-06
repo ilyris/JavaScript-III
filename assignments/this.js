@@ -1,9 +1,11 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. 
-* 2. 
-* 3. 
+* 1. The first principle is the global binding.
+* 2. The second principle is implicit binding, which is using this to refer to our own object. instead of the global object. What I mean is that we use this to refer to
+something that we have created.
+* 3. The third principle is new binding, where we can use the this keyword to refer to the object that we have created, but what makes this different is that every time a "NEW"
+object is created, this will be refering to the new object and its properties instead of the blueprint of the object.
 * 4. 
 *
 * write out a code example of each explanation above
